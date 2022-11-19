@@ -1,70 +1,84 @@
-# Getting Started with Create React App
+# Começando os estudos sobre REACT
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## Anotações
+no diretório do projeto, se utiliza:
 
-In the project directory, you can run:
+### `cd (nome do projeto)`
+é utilizado este comando no inicio de todo projeto para abrir a pasta do projeto
 
 ### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Usando esse comando, será aberto um localhost [http://localhost:3000](http://localhost:3000) 
+A pagina recarregará sempre que uma alteração for feita e salva
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Voce pode sempre verificar se há erros em seu código utilizando o console do navegador
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## `Aprendendo o básico de JSX`
 
-### `npm run build`
+Falando de forma simples, JSX é o Html que está juntamente com o JavaScript, podendo fazer a utilizagem de variáveis e equações
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+<img width="500px" src="./public/toReadme/JXS em html - react.png">
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+## `Aprendendo o básico sobre componentes`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Assim como toda aplicação há JSX, toda aplicação há componentes
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Permite dividir a aplicação em partes
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Precisamos criar um `arquivo de componentes`
+E importa-lo onde precisamos utilizar
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Normalmente ficam em uma pasta chamada `components`
 
-## Learn More
+Sempre criamos arquivos com a primeira letra de cada palavra em maiúscula,
+como se pode ver no exemplo:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+<img width="200px" src="./public/toReadme/arquivoComponent.png">
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+componentes podem ser importados e exportados em diferentes arquivos, veja o exemplo:
 
-### Code Splitting
+<img width="400px" src="./public/toReadme/HelloWord-Import.png">
+<img width="400px" src="./public/toReadme/HelloWord-Export.png">
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
+## `Aprendendo sobre Props`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- são valores passados para componentes
 
-### Making a Progressive Web App
+- podem deixa-los mais dinamicos
+- ou seja, mudando a execução por causa do valor do prop.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- o valor é passado como um atributo na chamada do componente
 
-### Advanced Configuration
+<img width="400px" src="./public/toReadme/props-import.png">
+<img width="400px" src="./public/toReadme/props-export.png">
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## `Adicionando CSS no REACT`
 
-### Deployment
+O css pode ser adicionado de forma glocal na aplicação,
+por meio do arquivo index.css por exemplo
+- porém é possível	estilizar a nível de componentes
+- utilizamos o CSS modules para isso 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+- Basta criar um arquivo como: `Componente.module.css`
+e chamar este css no componete
 
-### `npm run build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<img width="400px" src="./public/toReadme/module.png">
+
+A estrutura é exatamente a mesma do css padrão
+
+podem o nome do arquivo sempre se utiliza (nome do arquivo).module.css para dar-mos um padrão
+a ele.
+
+Logo após, no arquivo que desejamos aplicar o css, iremos exporta-lo: 
+
+<img width="400px" src="./public/toReadme/css-export.png">
+
+para aplicarmos o css em uma div, basta user className="styles.(nome da div)", veja abaixo:
+
+<img width="400px" src="./public/toReadme/export.png">
